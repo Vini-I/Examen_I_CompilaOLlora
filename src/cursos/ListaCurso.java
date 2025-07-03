@@ -12,6 +12,10 @@ import Personas.Profesores.Profesor;
 public class ListaCurso implements Lista <curso> {
     private curso[] list;
 
+    public ListaCurso() {
+        this.list = new curso[200];
+    }
+
     @Override
     public boolean Agregar(curso t) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
