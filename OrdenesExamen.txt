@@ -1,0 +1,60 @@
+Paquetes:
+-Personas Rodolfo - Clase Persona
+-Personas.Profesores Marco - Clase Profesores, ListaProfesores y Enum.
+-Personas.Estudiantes Rodolfo - Clase Estudiantes, ListaEstudiante.
+-Cursos Leandro - Clase Curso y ListaCursos
+-Listas Marco - Interfaz
+
+
+- Persona abstracta:
+Atributos: Cedula INT, nombre STRING
+Metodos de acceso y constructor.
+
+Solo crear atributos e insertar getter, constructor y toString().
+
+- Estudiante herda de persona:
+Atributos: Fecha de ingreso LOCALDATE, Correo STRING, Telefono STRING, Carrera STRING.
+Metodos: De acceso, Constructor, Anhos cursados(Period desde Fecha ingreso hasta fecha actual).
+
+Definir atributos generales, tener cuidado con Fecha que es tipo LocalDate (import).
+Insertar getter y setter de telefono, correo y carrera.
+Crear constructor y toString()
+Crear metodo para anhos cursados(Period.Bewteen(FechaDeIngreso, LocalDate.Now()).getYears())
+
+- Profesor hereda de persona:
+Atributos: Departamento STRING, Grado academico ENUM(Enum con Licenciatura, Maestria, Doctorado).
+Metodos: De acceso, Constructor.
+
+Definir departamento.
+Realizar Enum de Grado academico e implementarlo.
+Insertar getter y setter para Departamento y Grado acadmeico.
+Crear el constructor y toString().
+
+- Enum para profesores con Licenciatura, Maestria, Doctorado.
+
+- Curso:
+Atributos: Codigo INT, Nombre STRING, Cantidad de Creditos INT, Profesor PROFESOR (Objeto derivado de Profesor).
+Metodos: de acceso y constructor
+
+Definir atributos, tener cuidado con el atributo Profesor que es un objeto derivado de otra clase (import).
+
+Insertar metodos getter y setter para Codigo, Nombre, Cantidad de Creditos y Profesor.
+
+- Interfaz para listas:
+Metodos genericos: Agregar, Eliminar, Buscar.
+
+- Lista de Estudiante extiende de Interfaz:
+Atributos: Estudiantes[]
+Metodos: Solo genericos.
+
+- Lista de Profesores extiende de Interfaz:
+Atributos: Profesores[]
+Metodos: Genericos, Lista de profesores por grado academico: Debe retornar la lista de profesores que tengan un grado academico especificado.
+
+Lista de profesores: Toma la lista, compara lista[i].getGradoAcademico == parametro ENUM grado academico. Los almacena dentro de una lista nueva, esta lista nueva es la que se retorna. Hacer un contador individual para la lista.
+
+- Lista de Cursos extiende de Interfaz:
+Atributos: Cursos[]
+Metodos: Genericos, Cantidad de cursos por profesor: Debe retornar la cantidad de cursos impartidos por un profesor especifico.
+
+Cantidad de cursos por profesor: Toma la lista, compara lista[i].getProfesor == parametro de objeto Profesor. Los almacena dentro de una lista nueva, esta lista nueva es la que se retorna. Hacer un contador individual para la lista.
