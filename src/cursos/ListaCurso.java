@@ -4,7 +4,7 @@
  */
 package cursos;
 import Listas.Lista;
-import personas.profesores;
+import Personas.Profesores.Profesor;
 /**
  *
  * @author llean
@@ -26,7 +26,7 @@ public class ListaCurso implements Lista <curso> {
     public curso Buscar(Object id) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-    public int (profesor profesor){
+    public int cantCursosProfesor (Profesor profesor){
         int max = list.length;
         int cont = 0;
         for (int i = 0; i < max; i++) {
