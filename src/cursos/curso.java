@@ -1,5 +1,5 @@
 package cursos;
-import personas.profesores;
+import Personas.Profesores.Profesor;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -14,7 +14,7 @@ public class curso {
     private int codigo;
     private String nombre;
     private int cantCreditos;
-    private profesor profesor;
+    private Profesor profesor;
     
     //getters
 
@@ -28,9 +28,14 @@ public class curso {
 
     public int getCantCreditos() {
         return cantCreditos;
+        
     }
-    //setters
 
+    public Profesor getProfesor() {
+        return profesor;
+    }
+    
+    //setters
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -40,7 +45,7 @@ public class curso {
     }
     //constructor
 
-    public curso(int codigo, String nombre, int cantCreditos, profesor profesor) {
+    public curso(int codigo, String nombre, int cantCreditos, Profesor profesor) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.cantCreditos = cantCreditos;
